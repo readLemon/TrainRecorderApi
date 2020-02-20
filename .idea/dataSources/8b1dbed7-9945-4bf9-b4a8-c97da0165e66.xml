@@ -1111,52 +1111,100 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="279" parent="6" name="user"/>
-    <column id="280" parent="279" name="id">
+    <table id="279" parent="6" name="team_data"/>
+    <table id="280" parent="6" name="user"/>
+    <column id="281" parent="279" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="279" name="name">
+    <column id="282" parent="279" name="team_name">
+      <Position>2</Position>
+      <DataType>varchar(15)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="283" parent="279" name="train_num">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="284" parent="279" name="table_name_team_name_uindex">
+      <ColNames>team_name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="285" parent="279" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="286" parent="279" name="table_name_team_name_uindex">
+      <ColNames>team_name</ColNames>
+      <UnderlyingIndexName>table_name_team_name_uindex</UnderlyingIndexName>
+    </key>
+    <column id="287" parent="280" name="id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="288" parent="280" name="name">
       <Position>2</Position>
       <DataType>varchar(14)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="279" name="psw">
+    <column id="289" parent="280" name="psw">
       <Position>3</Position>
       <DataType>varchar(14)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="279" name="age">
+    <column id="290" parent="280" name="age">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="284" parent="279" name="user_id_uindex">
+    <column id="291" parent="280" name="absent">
+      <Position>5</Position>
+      <Comment>缺席，即未请假也未参加训练</Comment>
+      <DataType>int|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="292" parent="280" name="leave">
+      <Position>6</Position>
+      <Comment>请假，为参加训练</Comment>
+      <DataType>int|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="293" parent="280" name="user_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="285" parent="279" name="user_name_uindex">
+    <index id="294" parent="280" name="user_name_uindex">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="286" parent="279" name="PRIMARY">
+    <key id="295" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="287" parent="279" name="user_id_uindex">
+    <key id="296" parent="280" name="user_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>user_id_uindex</UnderlyingIndexName>
     </key>
-    <key id="288" parent="279" name="user_name_uindex">
+    <key id="297" parent="280" name="user_name_uindex">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>user_name_uindex</UnderlyingIndexName>
     </key>
