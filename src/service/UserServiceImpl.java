@@ -1,5 +1,7 @@
 package service;
 
+import bean.ApiConfig;
+import bean.Result;
 import bean.User;
 import dao.UserDaoImpl;
 import org.springframework.stereotype.Service;
@@ -14,17 +16,31 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public String addUser(String username, String psw) {
-        userDao.register(username, psw);
-        return "{\"info\":注册成功}";
+        String re = userDao.register(username, psw);
+        Result result = new Result();
+
+        if (re.equals(result.getInfo())) {
+            result.setStatus(ApiConfig.ResponseStatus.STATUS_REQUEST_SUCCESSFULL);
+            result.setInfo(ApiConfig.UserInfo.REGISER_SUCCESSFULL);
+        } else {
+            result.setStatus(ApiConfig.ResponseStatus.STATUS_REQUEST_FAILED);
+            result.setInfo(ApiConfig.UserInfo.REGISER_FAILED);
+        }
+            return Result.toJson(result);
     }
 
     @Override
     public String login(String username, String psw) {
-        User result = userDao.login(username, psw);
-        if (!result.getPsw().equals(psw)) {
-            return "{\"info\":密码错误}";
+        User user = userDao.login(username, psw);
+        Result result = new Result();
+        if (user.getPsw().equals(psw)) {
+            result.setData(user);
+            result.setStatus(ApiConfig.ResponseStatus.STATUS_REQUEST_SUCCESSFULL);
+            result.setInfo(ApiConfig.UserInfo.LOGIN_SUCCESSFULL);
         } else {
-            return "{\"info\":登录成功}";
+            result.setStatus(ApiConfig.ResponseStatus.STATUS_REQUEST_FAILED);
+            result.setInfo(ApiConfig.UserInfo.LOGIN_FAILED);
         }
+        return Result.toJson(result);
     }
 }

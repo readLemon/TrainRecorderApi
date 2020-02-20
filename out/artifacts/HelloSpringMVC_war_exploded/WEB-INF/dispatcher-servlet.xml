@@ -4,18 +4,18 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-<!--    <bean id="simpleUrlHandlerMapping"-->
-<!--          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">-->
+    <!--    <bean id="simpleUrlHandlerMapping"-->
+    <!--          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">-->
 
-<!--        <property name="mappings">-->
-<!--            <props>-->
-<!--                &lt;!&ndash; /hello 路径的请求交给 id 为 helloController 的控制器处理&ndash;&gt;-->
-<!--                <prop key="/hello">helloController</prop>-->
-<!--            </props>-->
+    <!--        <property name="mappings">-->
+    <!--            <props>-->
+    <!--                &lt;!&ndash; /hello 路径的请求交给 id 为 helloController 的控制器处理&ndash;&gt;-->
+    <!--                <prop key="/hello">helloController</prop>-->
+    <!--            </props>-->
 
-<!--        </property>-->
-<!--    </bean>-->
-<!--    <bean id="helloController" class="controller.HelloController"/>-->
+    <!--        </property>-->
+    <!--    </bean>-->
+    <!--    <bean id="helloController" class="controller.HelloController"/>-->
 
     <!-- 扫描controller下的组件 -->
     <context:component-scan base-package="controller"/>

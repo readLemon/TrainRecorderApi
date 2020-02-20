@@ -1,11 +1,10 @@
 package controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import bean.ApiConfig;
+import bean.Result;
+import bean.User;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import service.UserServiceImpl;
 
 import javax.annotation.Resource;
@@ -17,6 +16,7 @@ public class UserController {
     UserServiceImpl userServiceImpl;
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @ResponseBody
     public String login(@RequestParam("username") String username, @RequestParam("password") String password) {
         return userServiceImpl.login(username, password);
     }
@@ -27,5 +27,7 @@ public class UserController {
         System.out.println("register has be clicked");
         return userServiceImpl.addUser(username, password);
     }
+
+
 
 }
