@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="ManjaroDatabase" uuid="8b1dbed7-9945-4bf9-b4a8-c97da0165e66">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/train_recorder</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="aliyunDatabase" uuid="798d0a23-9857-44ca-ace7-35a91f793881">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://39.97.177.158:3306</jdbc-url>
+    </data-source>
+  </component>
+</project>
