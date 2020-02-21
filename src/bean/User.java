@@ -1,11 +1,50 @@
 package bean;
 
-public class User {
+import java.util.ArrayList;
+import java.util.List;
 
+public class User {
     private String name;
     private int age;
-    private int id;
-    private String psw;
+    private transient int id;
+    private transient String psw;
+    //个人的缺训记录
+    private List<PersonalDataBean.Absent> absents = new ArrayList<>();
+    //个人的请假记录
+    private List<PersonalDataBean.Leave> leaves = new ArrayList<>();
+
+    public void clearLeaves() {
+        leaves.clear();
+    }
+
+    public void addAllLeave(List<PersonalDataBean.Leave> leaves) {
+        this.leaves.addAll(leaves);
+    }
+
+    public void addLeave(PersonalDataBean.Leave leave) {
+        leaves.add(leave);
+    }
+
+    public void clearAbsents(){
+        absents.clear();
+    }
+
+    public void addAllAbsent(List<PersonalDataBean.Absent> absents) {
+        this.absents.addAll(absents);
+    }
+
+    public void addAbsent(PersonalDataBean.Absent absent) {
+        absents.add(absent);
+    }
+
+    public List<PersonalDataBean.Absent> getAbsents() {
+        return absents;
+    }
+
+    public List<PersonalDataBean.Leave> getLeaves() {
+        return leaves;
+    }
+
 
     public String getPsw() {
         return psw;

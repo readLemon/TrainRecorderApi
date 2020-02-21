@@ -10,6 +10,4 @@ public interface IUserDao {
 
     User login(String username, String psw);
 
-    Connection getConnection();
-
 }

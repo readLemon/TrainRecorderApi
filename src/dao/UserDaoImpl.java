@@ -5,6 +5,7 @@ import bean.User;
 import dao.iface.IUserDao;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+import util.UserUtil;
 
 import java.sql.*;
 
@@ -15,12 +16,10 @@ public class UserDaoImpl implements IUserDao {
     @Override
     public String register(String username, String psw) {
         String insertSql = "INSERT INTO user (name, psw) VALUES(?,?)";
-        Connection connection;
 //        String autoAddSql = "ALTER TABLE user AUTO_INCREMENT =1";
 //        Statement statement;
         try {
-            connection = getConnection();
-            ps = connection.prepareStatement(insertSql);
+            ps = UserUtil.getConnection().prepareStatement(insertSql);
             ps.setString(1, username);
             ps.setString(2, psw);
             ps.executeLargeUpdate();
@@ -38,7 +37,7 @@ public class UserDaoImpl implements IUserDao {
         User user = null;
         try {
             user = new User();
-            ps = getConnection().prepareStatement(sql);
+            ps = UserUtil.getConnection().prepareStatement(sql);
             ps.setString(1,username);
             ps.setString(2,psw);
             rs = ps.executeQuery();
@@ -53,24 +52,6 @@ public class UserDaoImpl implements IUserDao {
         return user;
     }
 
-    @Override
-    public Connection getConnection() {
-        String driver = "com.mysql.cj.jdbc.Driver";
-        String url = "jdbc:mysql://localhost:3306/train_recorder?useUnicode=true&characterEncoding=utf-8&useSSL=false";
-        String user = "root";
-        String psw = "9588";
-        Connection connection = null;
-
-
-        try {
-            Class.forName(driver);
-            connection = DriverManager.getConnection(url, user, psw);
-        } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        return connection;
-    }
 
     private static class UserMapper implements RowMapper<User> {
         @Override

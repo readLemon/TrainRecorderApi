@@ -5,7 +5,6 @@ import bean.Result;
 import bean.User;
 import dao.UserDaoImpl;
 import org.springframework.stereotype.Service;
-
 import javax.annotation.Resource;
 
 @Service(value = "userService")
@@ -43,4 +42,6 @@ public class UserServiceImpl implements IUserService {
         }
         return Result.toJson(result);
     }
+
+
 }

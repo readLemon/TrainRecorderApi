@@ -16,12 +16,20 @@
       </schema-mapping>
     </data-source>
     <data-source name="aliyunDatabase" uuid="798d0a23-9857-44ca-ace7-35a91f793881">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <database-info product="MySQL" version="5.6.47" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="5.6.47" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <schema-mapping />
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="train_recorders" />
+        </introspection-scope>
+      </schema-mapping>
       <ssh-properties>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
         <proxy-host>39.97.177.158</proxy-host>
         <proxy-port>3306</proxy-port>
         <local-port>1008</local-port>
