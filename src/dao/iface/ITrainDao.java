@@ -2,6 +2,7 @@ package dao.iface;
 
 import bean.PersonalDataBean;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -14,8 +15,8 @@ public interface ITrainDao {
 
     boolean addLeave(String username, long time, String leaveProject, String leaveReason);
 
-    List<PersonalDataBean.Absent> getPersonalAbsents(String username);
+    List<PersonalDataBean.Absent> getPersonalAbsents(String username) throws SQLException;
 
-    List<PersonalDataBean.Leave> getPersonalLeaves(String username);
+    List<PersonalDataBean.Leave> getPersonalLeaves(String username) throws SQLException;
 
 }

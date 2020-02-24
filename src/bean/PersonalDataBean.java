@@ -9,7 +9,7 @@ import org.apache.commons.logging.Log;
 public class PersonalDataBean {
 
     //未请假也未参加训练
-    public class Absent{
+    public static class Absent{
         //缺席的时间
         private long absentTime;
         //缺席的训练项目
@@ -32,7 +32,7 @@ public class PersonalDataBean {
         }
     }
     //请假
-    public class Leave{
+    public static class Leave{
         //请假时间
         private long leaveTime;
         //请假的项目

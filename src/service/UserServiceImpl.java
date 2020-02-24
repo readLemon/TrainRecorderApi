@@ -5,6 +5,8 @@ import bean.Result;
 import bean.User;
 import dao.UserDaoImpl;
 import org.springframework.stereotype.Service;
+import service.iface.IUserService;
+
 import javax.annotation.Resource;
 
 @Service(value = "userService")
@@ -19,10 +21,10 @@ public class UserServiceImpl implements IUserService {
         Result result = new Result();
 
         if (re.equals(result.getInfo())) {
-            result.setStatus(ApiConfig.ResponseStatus.STATUS_REQUEST_SUCCESSFULL);
+            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL);
             result.setInfo(ApiConfig.UserInfo.REGISER_SUCCESSFULL);
         } else {
-            result.setStatus(ApiConfig.ResponseStatus.STATUS_REQUEST_FAILED);
+            result.setStatus(ApiConfig.ResponseStatus.REQUEST_FAILED);
             result.setInfo(ApiConfig.UserInfo.REGISER_FAILED);
         }
             return Result.toJson(result);
@@ -34,10 +36,10 @@ public class UserServiceImpl implements IUserService {
         Result result = new Result();
         if (user.getPsw().equals(psw)) {
             result.setData(user);
-            result.setStatus(ApiConfig.ResponseStatus.STATUS_REQUEST_SUCCESSFULL);
+            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL);
             result.setInfo(ApiConfig.UserInfo.LOGIN_SUCCESSFULL);
         } else {
-            result.setStatus(ApiConfig.ResponseStatus.STATUS_REQUEST_FAILED);
+            result.setStatus(ApiConfig.ResponseStatus.REQUEST_FAILED);
             result.setInfo(ApiConfig.UserInfo.LOGIN_FAILED);
         }
         return Result.toJson(result);

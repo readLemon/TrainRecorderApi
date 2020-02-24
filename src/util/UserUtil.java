@@ -14,6 +14,7 @@ public  class UserUtil {
 
     private static User currentUser;
     private static Connection connection;
+    public static boolean tet = true;
 
 
 

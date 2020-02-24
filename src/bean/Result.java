@@ -1,18 +1,16 @@
 package bean;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonNull;
 
-import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Result {
-    private int status = ApiConfig.ResponseStatus.STATUS_REQUEST_SUCCESSFULL;
-    private String info = ApiConfig.ResponseInfo.INFO_REQUEST_SUCCESSFULL;
+    private int status = ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL;
+    private String info = ApiConfig.ResponseInfo.REQUEST_SUCCESSFULL;
     private Object data;
-    public List<Object> list = new ArrayList<>();
+    public List<Object> list;
 
     public static Gson gson = new Gson();//GsonBuilder()
 //            .excludeFieldsWithModifiers(Modifier.PROTECTED)
@@ -25,7 +23,17 @@ public class Result {
         return gson.toJson(o);
     }
 
+    public List<Object> getList() {
+        return list;
+    }
 
+    public void setList(List<Object> list) {
+        this.list = list;
+    }
+
+    public String toJson() {
+        return gson.toJson(this);
+    }
 
     public int getStatus() {
         return status;
