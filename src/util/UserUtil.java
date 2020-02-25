@@ -2,21 +2,35 @@ package util;
 
 import bean.User;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
  * created by chenyang
  * on 2020/2/21
  */
-public  class UserUtil {
+public class UserUtil {
 
     private static User currentUser;
     private static Connection connection;
     public static boolean tet = true;
 
 
+    public static boolean isUserExist(String username, String mySelectSql) {
+        String defaultSql = "SELECT COUNT(*) FROM user WHERE name ='" + username + "'";
+        String selectSql = mySelectSql == null ? defaultSql : mySelectSql;
+        try {
+            Statement sm = getConnection().createStatement();
+            ResultSet rs = sm.executeQuery(selectSql);
+            rs.next();
+            if (rs.getInt(1) == 1) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
 
     public static Connection getConnection() {
         if (connection == null) {

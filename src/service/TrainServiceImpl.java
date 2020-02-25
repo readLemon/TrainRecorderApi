@@ -7,6 +7,7 @@ import bean.User;
 import dao.TrainDaoImpl;
 import org.springframework.stereotype.Service;
 import service.iface.ITrainService;
+import util.UserUtil;
 
 import javax.annotation.Resource;
 import java.sql.SQLException;
@@ -23,8 +24,15 @@ public class TrainServiceImpl implements ITrainService {
 
     @Override
     public String addAbsent(String username, long time, String absentProject) {
-        boolean re = trainDao.addAbsent(username, time, absentProject);
         Result result = new Result();
+        //判断用户是否存在
+        if (!UserUtil.isUserExist(username, null)) {
+            result.setStatus(ApiConfig.ResponseStatus.INVALIB_USER);
+            result.setInfo(ApiConfig.UserInfo.INVALIB_USER);
+            return result.toJson();
+        }
+
+        boolean re = trainDao.addAbsent(username, time, absentProject);
         if (re) {
             result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL);
             result.setInfo(ApiConfig.TrainInfo.ADD_ABSENT_SUCCESS);
@@ -37,9 +45,15 @@ public class TrainServiceImpl implements ITrainService {
 
     @Override
     public String addLeave(String username, long time, String leaveProject, String leaveReason) {
+        Result result = new Result();
+        //判断用户是否存在
+        if (!UserUtil.isUserExist(username, null)) {
+            result.setStatus(ApiConfig.ResponseStatus.INVALIB_USER);
+            result.setInfo(ApiConfig.UserInfo.INVALIB_USER);
+            return result.toJson();
+        }
 
         boolean re = trainDao.addLeave(username, time, leaveProject, leaveReason);
-        Result result = new Result();
         if (re) {
             result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL);
             result.setInfo(ApiConfig.TrainInfo.ADD_LEAVE_SUCCESS);
@@ -55,6 +69,13 @@ public class TrainServiceImpl implements ITrainService {
         List<PersonalDataBean.Absent> absents;
         Result result = new Result();
         User user = new User();
+        //判断用户是否存在
+        if (!UserUtil.isUserExist(username, null)) {
+            result.setStatus(ApiConfig.ResponseStatus.INVALIB_USER);
+            result.setInfo(ApiConfig.UserInfo.INVALIB_USER);
+            return result.toJson();
+        }
+
         try {
             absents = trainDao.getPersonalAbsents(username);
 
@@ -79,6 +100,13 @@ public class TrainServiceImpl implements ITrainService {
         List<PersonalDataBean.Leave> leaves;
         Result result = new Result();
         User user = new User();
+        //判断用户是否存在
+        if (!UserUtil.isUserExist(username, null)) {
+            result.setStatus(ApiConfig.ResponseStatus.INVALIB_USER);
+            result.setInfo(ApiConfig.UserInfo.INVALIB_USER);
+            return result.toJson();
+        }
+
         try {
             leaves = trainDao.getPersonalLeaves(username);
             user.setName(username);

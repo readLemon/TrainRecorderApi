@@ -5,8 +5,10 @@ public class ApiConfig {
     public static final class ResponseStatus {
         //请求成功
         public static final int REQUEST_SUCCESSFULL = 200;
-        //
+        //请求失败
         public static final int REQUEST_FAILED = 201;
+        //用户不存在
+        public static final int INVALIB_USER = 114;
 
         //加入缺席次数失败
         public static final int ADD_ABSENT_FAILED = 911;
@@ -26,6 +28,8 @@ public class ApiConfig {
     }
 
     public static final class UserInfo {
+        public static final String INVALIB_USER = "This user does not exist!";
+
         public static final String REGISER_SUCCESSFULL = "rigister successfull";
         public static final String REGISER_FAILED = "rigister failed";
 
