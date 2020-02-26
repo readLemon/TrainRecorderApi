@@ -1,6 +1,6 @@
 package dao;
 
-import bean.Team;
+import bean.TeamTrainData;
 import dao.iface.ITeamDao;
 import org.springframework.stereotype.Repository;
 import util.UserUtil;
@@ -18,21 +18,20 @@ public class TeamDaoImpl implements ITeamDao {
     private PreparedStatement ps = null;
     private Statement sm = null;
     @Override
-    public List<Team> getTeamData(String teamName) throws SQLException {
+    public List<TeamTrainData> getTeamData(String teamName) throws SQLException {
         String selectSql = "SELECT * FROM team_data WHERE name='"+teamName+"'";
-        List<Team> teamDatas = new ArrayList<>();
-        Team team;
+        List<TeamTrainData> teamTrainDataData = new ArrayList<>();
+        TeamTrainData teamTrainData;
         sm = UserUtil.getConnection().createStatement();
         ResultSet rs = sm.executeQuery(selectSql);
         while (rs.next()) {
-            team = new Team();
-            team.setTeamName(rs.getString("name"));
-            team.setTrainPro(rs.getString("project"));
-            team.setTrainTime(rs.getTimestamp("time").getTime());
-            teamDatas.add(team);
+            teamTrainData = new TeamTrainData();
+            teamTrainData.setTrainPro(rs.getString("project"));
+            teamTrainData.setTrainTime(rs.getTimestamp("time").getTime());
+            teamTrainDataData.add(teamTrainData);
         }
 
-        return teamDatas;
+        return teamTrainDataData;
     }
 
     @Override

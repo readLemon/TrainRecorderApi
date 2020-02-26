@@ -2,6 +2,7 @@ package service;
 
 import bean.ApiConfig;
 import bean.Result;
+import bean.TeamResult;
 import dao.TeamDaoImpl;
 import org.springframework.stereotype.Service;
 import service.iface.ITeamService;
@@ -20,15 +21,19 @@ public class TeamServiceImpl implements ITeamService {
     @Override
     public String getTeamData(String teamName) {
         Result result = new Result();
+        TeamResult teamResult = new TeamResult();
         try {
-            result.setData(teamDao.getTeamData(teamName));
+            teamResult.setTrainData(teamDao.getTeamData(teamName));
+            teamResult.setTeamName(teamName);
+
             result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
             result.setInfo(ApiConfig.TeamInfo.GET_DATA_SUCCESSFUL);
-
         } catch (SQLException e) {
             result.setStatus(ApiConfig.ResponseStatus.GET_TEAM_DATA_FAILED);
             result.setInfo(ApiConfig.TeamInfo.GET_DATA_FAILED);
             e.printStackTrace();
+        } finally {
+            result.setData(teamResult);
         }
         return result.toJson();
     }
@@ -45,8 +50,6 @@ public class TeamServiceImpl implements ITeamService {
             result.setStatus(ApiConfig.ResponseStatus.ADD_TEAM_DATA_FAILED);
             result.setInfo(ApiConfig.TeamInfo.ADD_DATA_FAILED);
         }
-
         return result.toJson();
-
     }
 }

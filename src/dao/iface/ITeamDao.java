@@ -1,6 +1,6 @@
 package dao.iface;
 
-import bean.Team;
+import bean.TeamTrainData;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface ITeamDao {
 
-    List<Team> getTeamData(String teamName) throws SQLException;
+    List<TeamTrainData> getTeamData(String teamName) throws SQLException;
 
     boolean addTeamData(String teamName, String project, long time);
 }

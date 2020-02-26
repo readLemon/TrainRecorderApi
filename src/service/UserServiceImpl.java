@@ -2,10 +2,11 @@ package service;
 
 import bean.ApiConfig;
 import bean.Result;
-import bean.User;
+import bean.UserResult;
 import dao.UserDaoImpl;
 import org.springframework.stereotype.Service;
 import service.iface.IUserService;
+import util.UserUtil;
 
 import javax.annotation.Resource;
 
@@ -16,7 +17,7 @@ public class UserServiceImpl implements IUserService {
     UserDaoImpl userDao;
 
     @Override
-    public String addUser(String username, String psw) {
+    public String register(String username, String psw) {
         String re = userDao.register(username, psw);
         Result result = new Result();
 
@@ -32,10 +33,18 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public String login(String username, String psw) {
-        User user = userDao.login(username, psw);
+        UserResult userResult = userDao.login(username, psw);
         Result result = new Result();
-        if (user.getPsw().equals(psw)) {
-            result.setData(user);
+
+        if (UserUtil.isUserExist(username, null)) {
+            result.setStatus(ApiConfig.ResponseStatus.INVALIB_USER);
+            result.setInfo(ApiConfig.UserInfo.INVALIB_USER);
+            return result.toJson();
+        }
+
+        if (userResult.getPsw().equals(psw)) {
+            userResult.setListNull();
+            result.setData(userResult);
             result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
             result.setInfo(ApiConfig.UserInfo.LOGIN_SUCCESSFULL);
         } else {

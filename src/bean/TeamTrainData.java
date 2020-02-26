@@ -4,20 +4,12 @@ package bean;
  * created by chenyang
  * on 2020/2/26
  */
-public class Team {
+public class TeamTrainData {
 
-    private String teamName;
 
     private String trainPro;
     private long trainTime;
 
-    public String getTeamName() {
-        return teamName;
-    }
-
-    public void setTeamName(String teamName) {
-        this.teamName = teamName;
-    }
 
     public String getTrainPro() {
         return trainPro;

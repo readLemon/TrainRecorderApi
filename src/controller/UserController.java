@@ -2,7 +2,7 @@ package controller;
 
 import bean.ApiConfig;
 import bean.Result;
-import bean.User;
+import bean.UserResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import service.UserServiceImpl;
@@ -26,13 +26,13 @@ public class UserController {
     @ResponseBody
     public String register(@RequestParam("username")String username, @RequestParam("password")String password) {
         System.out.println("register has be clicked");
-        return userServiceImpl.addUser(username, password);
+        return userServiceImpl.register(username, password);
     }
 
     @RequestMapping(value = "/testJson", method = RequestMethod.GET)
     @ResponseBody
     public String register() {
-        User use = new User();
+        UserResult use = new UserResult();
         use.setName("55555");
         use.setPsw("156156");
         use.setAge(2222);

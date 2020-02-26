@@ -3,7 +3,7 @@ package bean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class UserResult {
     private String name;
     private int age;
     private transient int id;
@@ -45,6 +45,13 @@ public class User {
         return leaves;
     }
 
+    /**
+     * 虽然这么写很不科学，但是现在时间有点赶，先暂时用一下
+     */
+    public void setListNull(){
+        absents = null;
+        leaves = null;
+    }
 
     public String getPsw() {
         return psw;

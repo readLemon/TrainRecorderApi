@@ -1,6 +1,6 @@
 package util;
 
-import bean.User;
+import bean.UserResult;
 
 import java.sql.*;
 
@@ -10,7 +10,7 @@ import java.sql.*;
  */
 public class UserUtil {
 
-    private static User currentUser;
+    private static UserResult currentUserResult;
     private static Connection connection;
     public static boolean tet = true;
 
@@ -23,13 +23,13 @@ public class UserUtil {
             ResultSet rs = sm.executeQuery(selectSql);
             rs.next();
             if (rs.getInt(1) == 1) {
-                return true;
+                return false;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return false;
+        return true;
     }
 
     public static Connection getConnection() {
@@ -54,11 +54,11 @@ public class UserUtil {
         UserUtil.connection = connection;
     }
 
-    public static User getCurrentUser() {
-        return currentUser;
+    public static UserResult getCurrentUserResult() {
+        return currentUserResult;
     }
 
-    public static void setCurrentUser(User currentUser) {
-        UserUtil.currentUser = currentUser;
+    public static void setCurrentUserResult(UserResult currentUserResult) {
+        UserUtil.currentUserResult = currentUserResult;
     }
 }

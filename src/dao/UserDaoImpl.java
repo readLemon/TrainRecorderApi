@@ -1,9 +1,8 @@
 package dao;
 
 import bean.ApiConfig;
-import bean.User;
+import bean.UserResult;
 import dao.iface.IUserDao;
-import org.apache.commons.logging.Log;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 import util.UserUtil;
@@ -32,49 +31,41 @@ public class UserDaoImpl implements IUserDao {
     }
 
     @Override
-    public User login(String username, String psw) {
-
-        String selectSql = "SELECT COUNT(*) FROM user WHERE name='" + username + "'and psw='" + psw + "'";
+    public UserResult login(String username, String psw) {
         String sql = "SELECT * FROM user WHERE name='" + username + "'and psw='" + psw + "'";
         ResultSet rs = null;
-        User user = null;
+        UserResult userResult = new UserResult();
         try {
-            user = new User();
-            ps = UserUtil.getConnection().prepareStatement(selectSql);
-            rs = ps.executeQuery();
-            rs.next();
-            if (rs.getInt(1) == 1){
+
                 ps = UserUtil.getConnection().prepareStatement(sql);
                 rs = ps.executeQuery();
                 rs.next();
-                user.setId(rs.getInt(1));
-                user.setName(rs.getString(2));
-                user.setPsw(rs.getString(3));
-                user.setAge(rs.getInt(4));
+                userResult.setId(rs.getInt(1));
+                userResult.setName(rs.getString(2));
+                userResult.setPsw(rs.getString(3));
+                userResult.setAge(rs.getInt(4));
                 System.out.println("*********登录成功********");
                 System.out.println("*********is:"+rs.getInt(1));
                 System.out.println("*********name:"+rs.getString(2));
                 System.out.println("*********age:"+rs.getInt(3));
                 System.out.println("*********psw:"+rs.getString(4));
 
-            } else {
-                System.out.println("*********");
-            }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return user;
+        return userResult;
     }
 
 
-    private static class UserMapper implements RowMapper<User> {
+    private static class UserMapper implements RowMapper<UserResult> {
         @Override
-        public User mapRow(ResultSet resultSet, int i) throws SQLException {
-            User user = new User();
-            user.setName(resultSet.getString("username"));
-            user.setAge(resultSet.getInt("age"));
-            user.setId(resultSet.getInt("id"));
-            return user;
+        public UserResult mapRow(ResultSet resultSet, int i) throws SQLException {
+            UserResult userResult = new UserResult();
+            userResult.setName(resultSet.getString("username"));
+            userResult.setAge(resultSet.getInt("age"));
+            userResult.setId(resultSet.getInt("id"));
+            return userResult;
         }
     }
 

@@ -32,10 +32,10 @@ public class TrainController {
     @ResponseBody
     public String addLeave(@RequestParam String username,
                            @RequestParam long time,
-                           @RequestParam String leaveProject,
-                           @RequestParam String leaveReason) {
+                           @RequestParam String project,
+                           @RequestParam String reason) {
 
-        return trainService.addLeave(username, time, leaveProject, leaveReason);
+        return trainService.addLeave(username, time, project, reason);
     }
 
     @RequestMapping(value = "/getAbsents", method = RequestMethod.POST)
