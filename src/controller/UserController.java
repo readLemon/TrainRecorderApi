@@ -38,7 +38,7 @@ public class UserController {
         use.setAge(2222);
         System.out.println("register has be clicked");
         Result result = new Result();
-        result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL);
+        result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
         result.setInfo(ApiConfig.ResponseInfo.REQUEST_SUCCESSFULL);
         result.setData(use);
 //        result.lisy.add(use);

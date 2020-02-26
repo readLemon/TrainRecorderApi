@@ -34,7 +34,7 @@ public class TrainServiceImpl implements ITrainService {
 
         boolean re = trainDao.addAbsent(username, time, absentProject);
         if (re) {
-            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL);
+            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
             result.setInfo(ApiConfig.TrainInfo.ADD_ABSENT_SUCCESS);
         } else {
             result.setStatus(ApiConfig.ResponseStatus.ADD_ABSENT_FAILED);
@@ -55,7 +55,7 @@ public class TrainServiceImpl implements ITrainService {
 
         boolean re = trainDao.addLeave(username, time, leaveProject, leaveReason);
         if (re) {
-            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL);
+            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
             result.setInfo(ApiConfig.TrainInfo.ADD_LEAVE_SUCCESS);
         } else {
             result.setStatus(ApiConfig.ResponseStatus.ADD_LEAVE_FAILED);
@@ -83,7 +83,7 @@ public class TrainServiceImpl implements ITrainService {
             user.addAllAbsent(absents);
 
             result.setData(user);
-            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL);
+            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
             result.setInfo(ApiConfig.TrainInfo.GET_ABSENTS_SUCCESSFUL);
 
         } catch (SQLException e) {
@@ -113,7 +113,7 @@ public class TrainServiceImpl implements ITrainService {
             user.addAllLeave(leaves);
 
             result.setData(user);
-            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL);
+            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
             result.setInfo(ApiConfig.TrainInfo.GET_LEAVES_SUCCESSFULL);
 
         } catch (SQLException e) {

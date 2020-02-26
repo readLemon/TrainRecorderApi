@@ -21,7 +21,7 @@ public class UserServiceImpl implements IUserService {
         Result result = new Result();
 
         if (re.equals(result.getInfo())) {
-            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL);
+            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
             result.setInfo(ApiConfig.UserInfo.REGISER_SUCCESSFULL);
         } else {
             result.setStatus(ApiConfig.ResponseStatus.REQUEST_FAILED);
@@ -36,7 +36,7 @@ public class UserServiceImpl implements IUserService {
         Result result = new Result();
         if (user.getPsw().equals(psw)) {
             result.setData(user);
-            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL);
+            result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
             result.setInfo(ApiConfig.UserInfo.LOGIN_SUCCESSFULL);
         } else {
             result.setStatus(ApiConfig.ResponseStatus.REQUEST_FAILED);

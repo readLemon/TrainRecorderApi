@@ -3,11 +3,10 @@ package bean;
 import com.google.gson.Gson;
 import com.google.gson.JsonNull;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Result {
-    private int status = ApiConfig.ResponseStatus.REQUEST_SUCCESSFULL;
+    private int status = ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL;
     private String info = ApiConfig.ResponseInfo.REQUEST_SUCCESSFULL;
     private Object data;
     public List<Object> list;

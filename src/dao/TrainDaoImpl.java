@@ -83,7 +83,7 @@ public class TrainDaoImpl implements ITrainDao {
 
     @Override
     public List<PersonalDataBean.Leave> getPersonalLeaves(String username) throws SQLException {
-        String sql = "SELECT * FROM p_leave WHERE name=" + username + "";
+        String sql = "SELECT * FROM p_leave WHERE name='" + username + "'";
         ps = UserUtil.getConnection().prepareStatement(sql);
         List<PersonalDataBean.Leave> leaves = new ArrayList<>();
         ResultSet queryResult = ps.executeQuery();
