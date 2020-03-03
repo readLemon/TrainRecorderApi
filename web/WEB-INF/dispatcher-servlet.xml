@@ -4,7 +4,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!--    <bean id="simpleUrlHandlerMapping"-->
+    <!--    <com.train.spring.bean id="simpleUrlHandlerMapping"-->
     <!--          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">-->
 
     <!--        <property name="mappings">-->
@@ -14,12 +14,12 @@
     <!--            </props>-->
 
     <!--        </property>-->
-    <!--    </bean>-->
-    <!--    <bean id="helloController" class="controller.HelloController"/>-->
+    <!--    </com.train.spring.bean>-->
+    <!--    <com.train.spring.bean id="helloController" class="com.train.spring.controller.HelloController"/>-->
 
     <!-- 扫描controller下的组件 -->
-    <context:component-scan base-package="controller"/>
-    <context:component-scan base-package="dao"/>
-    <context:component-scan base-package="service"/>
+    <context:component-scan base-package="com.train.spring.controller"/>
+    <context:component-scan base-package="com.train.spring.dao"/>
+    <context:component-scan base-package="com.train.spring.service"/>
 
 </beans>
