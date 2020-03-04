@@ -1,6 +1,7 @@
 package com.train.spring.dao.iface;
 
-import com.train.spring.bean.PersonalDataBean;
+import com.train.spring.bean.Absent;
+import com.train.spring.bean.Leave;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -15,8 +16,8 @@ public interface ITrainDao {
 
     boolean addLeave(String username, long time, String leaveProject, String leaveReason);
 
-    List<PersonalDataBean.Absent> getPersonalAbsents(String username) throws SQLException;
+    List<Absent> getPersonalAbsents(String username) throws SQLException;
 
-    List<PersonalDataBean.Leave> getPersonalLeaves(String username) throws SQLException;
+    List<Leave> getPersonalLeaves(String username) throws SQLException;
 
 }

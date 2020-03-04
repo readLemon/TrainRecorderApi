@@ -7,72 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a7d904-5b3b-4457-911c-9fd5d75911a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/bean/Leave.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloSpringMVC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelloSpringMVC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig$ResponseInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig$ResponseInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig$ResponseStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig$ResponseStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig$TeamInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig$TeamInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig$TrainInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig$TrainInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig$UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig$UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/ApiConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/PersonalDataBean$Absent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/PersonalDataBean$Absent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/PersonalDataBean$Leave.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/PersonalDataBean$Leave.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/PersonalDataBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/PersonalDataBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/TeamResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/TeamResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/TeamTrainData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/TeamTrainData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/UserResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/bean/UserResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/controller/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/controller/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/controller/TeamConroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/controller/TeamConroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/controller/TrainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/controller/TrainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/TeamDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/TeamDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/TrainDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/TrainDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/UserDaoImpl$UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/UserDaoImpl$UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/iface/ITeamDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/iface/ITeamDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/iface/ITrainDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/iface/ITrainDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/iface/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/dao/iface/IUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/TeamServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/TeamServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/TrainServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/TrainServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/iface/ITeamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/iface/ITeamService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/iface/ITrainService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/iface/ITrainService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/iface/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/service/iface/IUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/util/UserUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpringMVC_war_exploded/WEB-INF/classes/util/UserUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/ApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/bean/ApiConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/PersonalDataBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/bean/PersonalDataBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/bean/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/TeamResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/bean/TeamResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/TeamTrainData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/bean/TeamTrainData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/UserResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/bean/UserResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/TeamConroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/controller/TeamConroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/TrainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/controller/TrainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/TeamDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/dao/TeamDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/TrainDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/dao/TrainDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/dao/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/iface/ITeamDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/dao/iface/ITeamDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/iface/ITrainDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/dao/iface/ITrainDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/iface/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/dao/iface/IUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/TeamServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/service/TeamServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/TrainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/service/TrainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/iface/ITeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/service/iface/ITeamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/iface/ITrainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/service/iface/ITrainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/iface/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/service/iface/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/util/UserUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/train/spring/bean/PersonalDataBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/bean/Absent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/train/spring/bean/UserResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/bean/UserResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/train/spring/dao/TrainDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/dao/TrainDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/train/spring/dao/iface/ITrainDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/dao/iface/ITrainDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/train/spring/service/TrainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/train/spring/service/TrainServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +103,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -263,7 +204,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -295,7 +236,9 @@
       <workItem from="1582700051344" duration="15021000" />
       <workItem from="1583114010099" duration="60000" />
       <workItem from="1583114838506" duration="2245000" />
-      <workItem from="1583196524093" duration="3240000" />
+      <workItem from="1583196524093" duration="3323000" />
+      <workItem from="1583250159163" duration="134000" />
+      <workItem from="1583317101990" duration="1451000" />
     </task>
     <servers />
   </component>
@@ -376,62 +319,62 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1873" y="193" key="FileChooserDialogImpl/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583165780813" />
-    <state width="913" height="177" key="GridCell.Tab.0.bottom" timestamp="1583200069700">
+    <state width="913" height="177" key="GridCell.Tab.0.bottom" timestamp="1583200142368">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.0.bottom/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069700" />
-    <state width="913" height="177" key="GridCell.Tab.0.center" timestamp="1583200069700">
+    <state width="913" height="177" key="GridCell.Tab.0.bottom/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142368" />
+    <state width="913" height="177" key="GridCell.Tab.0.center" timestamp="1583200142368">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.0.center/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069700" />
-    <state width="913" height="177" key="GridCell.Tab.0.left" timestamp="1583200069700">
+    <state width="913" height="177" key="GridCell.Tab.0.center/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142368" />
+    <state width="913" height="177" key="GridCell.Tab.0.left" timestamp="1583200142368">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.0.left/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069700" />
-    <state width="913" height="177" key="GridCell.Tab.0.right" timestamp="1583200069700">
+    <state width="913" height="177" key="GridCell.Tab.0.left/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142368" />
+    <state width="913" height="177" key="GridCell.Tab.0.right" timestamp="1583200142368">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.0.right/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069700" />
-    <state width="913" height="177" key="GridCell.Tab.1.bottom" timestamp="1583200069500">
+    <state width="913" height="177" key="GridCell.Tab.0.right/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142368" />
+    <state width="913" height="177" key="GridCell.Tab.1.bottom" timestamp="1583200142368">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.1.bottom/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069500" />
-    <state width="913" height="177" key="GridCell.Tab.1.center" timestamp="1583200069499">
+    <state width="913" height="177" key="GridCell.Tab.1.bottom/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142368" />
+    <state width="913" height="177" key="GridCell.Tab.1.center" timestamp="1583200142368">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.1.center/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069499" />
-    <state width="913" height="177" key="GridCell.Tab.1.left" timestamp="1583200069499">
+    <state width="913" height="177" key="GridCell.Tab.1.center/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142368" />
+    <state width="913" height="177" key="GridCell.Tab.1.left" timestamp="1583200142368">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.1.left/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069499" />
-    <state width="913" height="177" key="GridCell.Tab.1.right" timestamp="1583200069499">
+    <state width="913" height="177" key="GridCell.Tab.1.left/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142368" />
+    <state width="913" height="177" key="GridCell.Tab.1.right" timestamp="1583200142368">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.1.right/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069499" />
-    <state width="913" height="177" key="GridCell.Tab.2.bottom" timestamp="1583200069500">
+    <state width="913" height="177" key="GridCell.Tab.1.right/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142368" />
+    <state width="913" height="177" key="GridCell.Tab.2.bottom" timestamp="1583200142369">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.2.bottom/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069500" />
-    <state width="913" height="177" key="GridCell.Tab.2.center" timestamp="1583200069500">
+    <state width="913" height="177" key="GridCell.Tab.2.bottom/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142369" />
+    <state width="913" height="177" key="GridCell.Tab.2.center" timestamp="1583200142369">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.2.center/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069500" />
-    <state width="913" height="177" key="GridCell.Tab.2.left" timestamp="1583200069500">
+    <state width="913" height="177" key="GridCell.Tab.2.center/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142369" />
+    <state width="913" height="177" key="GridCell.Tab.2.left" timestamp="1583200142369">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.2.left/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069500" />
-    <state width="913" height="177" key="GridCell.Tab.2.right" timestamp="1583200069500">
+    <state width="913" height="177" key="GridCell.Tab.2.left/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142369" />
+    <state width="913" height="177" key="GridCell.Tab.2.right" timestamp="1583200142369">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state width="913" height="177" key="GridCell.Tab.2.right/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200069500" />
+    <state width="913" height="177" key="GridCell.Tab.2.right/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583200142369" />
     <state width="237" height="478" key="HiddenNamespacesPopup" timestamp="1583114027386">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state width="237" height="478" key="HiddenNamespacesPopup/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583114027386" />
-    <state x="1580" y="56" key="SettingsEditor" timestamp="1583198457604">
+    <state x="1580" y="56" key="SettingsEditor" timestamp="1583250278168">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
-    <state x="1580" y="56" key="SettingsEditor/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583198457604" />
+    <state x="1580" y="56" key="SettingsEditor/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583250278168" />
     <state width="200" height="461" key="SqlResolveConfigurable" timestamp="1582602938823">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
@@ -472,11 +415,11 @@
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="1408" y="163" width="1240" height="700" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1582281279155" />
-    <state x="1757" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1583114837963">
+    <state x="1757" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1583317107406">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>
     <state x="371" y="302" key="com.intellij.ide.util.TipDialog/0.66.1366.768/1366.0.1440.900@0.66.1366.768" timestamp="1582700051768" />
-    <state x="1757" y="277" key="com.intellij.ide.util.TipDialog/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583114837963" />
+    <state x="1757" y="277" key="com.intellij.ide.util.TipDialog/0.66.1366.768/1366.0.1440.900@1366.0.1440.900" timestamp="1583317107406" />
     <state x="1463" y="5" key="new project wizard" timestamp="1582179255868">
       <screen x="1366" y="0" width="1440" height="900" />
     </state>

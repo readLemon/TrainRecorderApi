@@ -1,6 +1,7 @@
 package com.train.spring.dao;
 
-import com.train.spring.bean.PersonalDataBean;
+import com.train.spring.bean.Absent;
+import com.train.spring.bean.Leave;
 import com.train.spring.dao.iface.ITrainDao;
 import org.springframework.stereotype.Repository;
 import com.train.spring.util.UserUtil;
@@ -63,14 +64,14 @@ public class TrainDaoImpl implements ITrainDao {
     }
 
     @Override
-    public List<PersonalDataBean.Absent> getPersonalAbsents(String username) throws SQLException {
+    public List<Absent> getPersonalAbsents(String username) throws SQLException {
         String sql = "SELECT * FROM p_absent WHERE name='" + username + "'";
-        List<PersonalDataBean.Absent> absents = new ArrayList<>();
+        List<Absent> absents = new ArrayList<>();
 
         ps = UserUtil.getConnection().prepareStatement(sql);
         ResultSet queryResult = ps.executeQuery();
         while (queryResult.next()) {
-            PersonalDataBean.Absent absent = new PersonalDataBean.Absent();
+            Absent absent = new Absent();
             absent.setAbsentTime(queryResult.getTimestamp("time").getTime());
             absent.setAbsentProject(queryResult.getString("project"));
             absents.add(absent);
@@ -82,14 +83,14 @@ public class TrainDaoImpl implements ITrainDao {
     }
 
     @Override
-    public List<PersonalDataBean.Leave> getPersonalLeaves(String username) throws SQLException {
+    public List<Leave> getPersonalLeaves(String username) throws SQLException {
         String sql = "SELECT * FROM p_leave WHERE name='" + username + "'";
         ps = UserUtil.getConnection().prepareStatement(sql);
-        List<PersonalDataBean.Leave> leaves = new ArrayList<>();
+        List<Leave> leaves = new ArrayList<>();
         ResultSet queryResult = ps.executeQuery();
 
         while (queryResult.next()) {
-            PersonalDataBean.Leave leave = new PersonalDataBean.Leave();
+            Leave leave = new Leave();
             leave.setLeaveProject(queryResult.getString("project"));
             leave.setLeaveReason(queryResult.getString("reason"));
             leave.setLeaveTime(queryResult.getTimestamp("time").getTime());

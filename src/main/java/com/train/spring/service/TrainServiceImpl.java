@@ -1,9 +1,6 @@
 package com.train.spring.service;
 
-import com.train.spring.bean.ApiConfig;
-import com.train.spring.bean.PersonalDataBean;
-import com.train.spring.bean.Result;
-import com.train.spring.bean.UserResult;
+import com.train.spring.bean.*;
 import com.train.spring.dao.TrainDaoImpl;
 import org.springframework.stereotype.Service;
 import com.train.spring.service.iface.ITrainService;
@@ -66,9 +63,8 @@ public class TrainServiceImpl implements ITrainService {
 
     @Override
     public String getPersonalAbsents(String username) {
-        List<PersonalDataBean.Absent> absents;
+        List<Absent> absents;
         Result result = new Result();
-        UserResult userResult = new UserResult();
         //判断用户是否存在
         if (UserUtil.isUserExist(username, null)) {
             result.setStatus(ApiConfig.ResponseStatus.INVALIB_USER);
@@ -79,10 +75,8 @@ public class TrainServiceImpl implements ITrainService {
         try {
             absents = trainDao.getPersonalAbsents(username);
 
-            userResult.setName(username);
-            userResult.addAllAbsent(absents);
 
-            result.setData(userResult);
+            result.setData(absents);
             result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
             result.setInfo(ApiConfig.TrainInfo.GET_ABSENTS_SUCCESSFUL);
 
@@ -97,9 +91,8 @@ public class TrainServiceImpl implements ITrainService {
 
     @Override
     public String getPersonalLeaves(String username) {
-        List<PersonalDataBean.Leave> leaves;
+        List<Leave> leaves;
         Result result = new Result();
-        UserResult userResult = new UserResult();
         //判断用户是否存在
         if (UserUtil.isUserExist(username, null)) {
             result.setStatus(ApiConfig.ResponseStatus.INVALIB_USER);
@@ -109,10 +102,8 @@ public class TrainServiceImpl implements ITrainService {
 
         try {
             leaves = trainDao.getPersonalLeaves(username);
-            userResult.setName(username);
-            userResult.addAllLeave(leaves);
 
-            result.setData(userResult);
+            result.setData(leaves);
             result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
             result.setInfo(ApiConfig.TrainInfo.GET_LEAVES_SUCCESSFULL);
 
