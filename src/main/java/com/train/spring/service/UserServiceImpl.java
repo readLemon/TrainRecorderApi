@@ -43,7 +43,6 @@ public class UserServiceImpl implements IUserService {
         }
 
         if (userResult.getPsw().equals(psw)) {
-            userResult.setListNull();
             result.setData(userResult);
             result.setStatus(ApiConfig.ResponseStatus.REQUEST_SUCCESSFUL);
             result.setInfo(ApiConfig.UserInfo.LOGIN_SUCCESSFULL);

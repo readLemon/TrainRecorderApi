@@ -1,13 +1,19 @@
 package com.train.spring.bean;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class UserResult {
     private String name;
     private int age;
+    private boolean isCaptain;
     private transient int id;
     private transient String psw;
+
+    public boolean isCaptain() {
+        return isCaptain;
+    }
+
+    public void setCaptain(boolean captain) {
+        isCaptain = captain;
+    }
 
     public String getPsw() {
         return psw;

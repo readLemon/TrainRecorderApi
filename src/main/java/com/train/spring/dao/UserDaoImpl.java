@@ -44,6 +44,7 @@ public class UserDaoImpl implements IUserDao {
                 userResult.setName(rs.getString(2));
                 userResult.setPsw(rs.getString(3));
                 userResult.setAge(rs.getInt(4));
+                userResult.setCaptain(rs.getBoolean(5));
                 System.out.println("*********登录成功********");
                 System.out.println("*********is:"+rs.getInt(1));
                 System.out.println("*********name:"+rs.getString(2));
@@ -68,6 +69,4 @@ public class UserDaoImpl implements IUserDao {
             return userResult;
         }
     }
-
-
 }
