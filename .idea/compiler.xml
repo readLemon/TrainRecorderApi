@@ -9,8 +9,8 @@
         <module name="HelloSpringMVC" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="13">
-      <module name="HelloSpringMVC" target="13" />
+    <bytecodeTargetLevel target="12">
+      <module name="HelloSpringMVC" target="12" />
     </bytecodeTargetLevel>
   </component>
 </project>

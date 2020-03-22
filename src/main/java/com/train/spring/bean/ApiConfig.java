@@ -23,6 +23,11 @@ public class ApiConfig {
         //增加团队数据失败
         public static final int ADD_TEAM_DATA_FAILED = 101;
 
+        //加入迟到数据失败
+        public static final int ADD_LATE_FAILED = 435;
+        //获取迟到数据失败
+        public static final int GET_LATES_FAILED = 436;
+
     }
 
     public static final class ResponseInfo {
@@ -63,8 +68,17 @@ public class ApiConfig {
 
         public static final String ADD_DATA_SUCCESSFUL = "ADD_DATA_SUCCESSFUL";
         public static final String ADD_DATA_FAILED = "ADD_DATA_Failed";
+    }
 
+    public static final  class LateInfo{
+
+        public static final String GET_LATES_SUCCESSFUL = "GET_LATES_SUCCESSFUL";
+        public static final String GET_LATES_FAILED = "GET_LATES_FAILED";
+
+        public static final String ADD_LATES_FAILED = "ADD_LATES_FAILED";
+        public static final String ADD_LATES_SUCCESSFUL = "ADD_LATES_SUCCESSFUL";
 
     }
+
 
 }
